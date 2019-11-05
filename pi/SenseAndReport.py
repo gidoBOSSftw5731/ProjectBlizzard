@@ -24,7 +24,7 @@ while True:
     if GPIO.input(switch1):
         print('closed')
     else:
-        true
+        print('open')
 
 ## Reset to start
 GPIO.cleanup()
