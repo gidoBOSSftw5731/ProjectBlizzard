@@ -8,9 +8,9 @@ import time
 ## Import GPIO library
 import RPi.GPIO as GPIO
 
-## Set basic variables: GPIO pin
+## Set basic variables: GPIO pin and file path
 switch1 = 40
-#file_location = '/var/tmp/pipicts'
+file_location = '/usr/share/nginx/doorsense/status'
 
 ## Use board pin numbering.
 GPIO.setmode(GPIO.BOARD)
@@ -18,13 +18,15 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(switch1, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
 ## Turn on GPIO pin 40
 GPIO.input(switch1)
+
+#open file once
+f = open(file_location, "w")
+
 print('ACTIVATED')
 ## Loop watching for switch activity.
 while True:
     if GPIO.input(switch1):
-        print('closed')
+        f.write("0") # closed
     else:
-        print('open')
-
-    time.sleep(.1)
+        f.write("1") # open
 
