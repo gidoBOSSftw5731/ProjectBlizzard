@@ -25,8 +25,9 @@ f = open(file_location, "w")
 print('ACTIVATED')
 ## Loop watching for switch activity.
 while True:
+    f.seek(0, 0)
     if GPIO.input(switch1):
-        f.write("0") # closed
+        f.writ("0") # closed
     else:
         f.write("1") # open
 
