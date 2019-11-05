@@ -15,7 +15,7 @@ switch1 = 40
 ## Use board pin numbering.
 GPIO.setmode(GPIO.BOARD)
 ## Setup GPIO Pin 40 to IN
-GPIO.setup(switch1, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
+GPIO.setup(switch1, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 ## Turn on GPIO pin 40
 GPIO.input(switch1)
 print('ACTIVATED')
