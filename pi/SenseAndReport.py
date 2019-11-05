@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import os
 import time
@@ -8,7 +8,7 @@ import time
 ## Import GPIO library
 import RPi.GPIO as GPIO
 
-## Set basic variables: GPIO pin and file archive location.
+## Set basic variables: GPIO pin
 switch1 = 40
 #file_location = '/var/tmp/pipicts'
 
@@ -28,5 +28,3 @@ while True:
 
     time.sleep(.1)
 
-## Reset to start
-GPIO.cleanup()
