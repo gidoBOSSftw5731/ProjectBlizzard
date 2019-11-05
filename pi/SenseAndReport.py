@@ -21,8 +21,10 @@ GPIO.input(switch1)
 print('ACTIVATED')
 ## Loop watching for switch activity.
 while True:
-  if GPIO.input(switch1) == False:
-    print('foo')
+    if GPIO.input(switch1):
+        print('closed')
+    else:
+        true
 
 ## Reset to start
 GPIO.cleanup()
