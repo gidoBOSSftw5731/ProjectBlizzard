@@ -9,7 +9,7 @@ import time
 import RPi.GPIO as GPIO
 
 ## Set basic variables: GPIO pin and file archive location.
-switch1 = 40
+switch1 = 38
 #file_location = '/var/tmp/pipicts'
 
 ## Use board pin numbering.
