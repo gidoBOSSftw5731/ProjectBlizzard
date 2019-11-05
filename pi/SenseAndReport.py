@@ -27,7 +27,7 @@ print('ACTIVATED')
 while True:
     f.seek(0, 0)
     if GPIO.input(switch1):
-        f.writ("0") # closed
+        f.write("0") # closed
     else:
         f.write("1") # open
 
