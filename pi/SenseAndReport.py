@@ -26,5 +26,7 @@ while True:
     else:
         print('open')
 
+    time.sleep(.1)
+
 ## Reset to start
 GPIO.cleanup()
